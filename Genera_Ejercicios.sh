@@ -24,5 +24,9 @@ cat $SCRIPT_DIR/E_Estructura_${NroEstructura}.txt | tee $HOME/Defensa/Ejercicios
 #Permisos:
 cat $SCRIPT_DIR/E_Permisos_${NroPermisos}.txt | tee -a $HOME/Defensa/Ejercicios.txt
 mkdir $HOME/Defensa/Permisos_${NroPermisos}
+echo
+sudo ls -l $HOME/Defensa/Permisos_${NroPermisos} 
+echo
 cat $SCRIPT_DIR/E_P${NroPermisos}.txt  | tee -a  $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
 
+echo

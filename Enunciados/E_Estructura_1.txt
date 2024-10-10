@@ -1,3 +1,5 @@
+Cree la siguiente Estructura de directorios:
+
 paquete/
 ├── carta
 │   ├── emisor

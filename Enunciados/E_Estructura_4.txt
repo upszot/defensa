@@ -1,3 +1,6 @@
+Cree la siguiente Estructura de directorios:
+
+
 matematicas/
 ├── conjeturas
 │   ├── incognitas
