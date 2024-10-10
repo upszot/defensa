@@ -1,0 +1,9 @@
+epoca/
+├── antigua
+│   ├── eventos
+│   └── personas
+├── moderna
+│   ├── eventos
+│   └── personas
+└── tecnologia
+

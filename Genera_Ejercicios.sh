@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DIR_BASE=$(dirname "$(readlink -f "$0")")
-SCRIPT_DIR="${DIR_BASE}/Enunciados/"
+SCRIPT_DIR="${DIR_BASE}/Enunciados"
 
 
 NroEstructura="$(( ( RANDOM % 4 ) + 1 ))"

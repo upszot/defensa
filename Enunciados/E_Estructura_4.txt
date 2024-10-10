@@ -1,0 +1,8 @@
+matematicas/
+├── conjeturas
+│   ├── incognitas
+│   └── matematicos
+└── teoremas
+    ├── matematicos
+    └── soluciones
+
