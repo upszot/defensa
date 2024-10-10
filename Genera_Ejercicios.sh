@@ -27,6 +27,6 @@ mkdir $HOME/Defensa/Permisos_${NroPermisos}
 echo
 sudo ls -l $HOME/Defensa/Permisos_${NroPermisos} 
 echo
-cat $SCRIPT_DIR/E_P${NroPermisos}.txt  | tee -a  $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
+cat $SCRIPT_DIR/E_P${NroPermisos}.txt  >>  $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
 
 echo
