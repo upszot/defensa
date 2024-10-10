@@ -4,4 +4,4 @@ Permisos:
 
 Modificar SOLAMENTE los permisos del owner de la carpeta "Permisos" para que:
     - El usuario Puede ver el contenido del archivo, pero NO conocer su existencia
-
+    - ls -l 

@@ -1,12 +1,13 @@
 Cree la siguiente Estructura de directorios:
 
 
+
 epoca/
 ├── antigua
 │   ├── eventos
 │   └── personas
-├── moderna
-│   ├── eventos
-│   └── personas
-└── tecnologia
+└── moderna
+    ├── eventos
+    ├── personas
+    └── tecnologia
 
