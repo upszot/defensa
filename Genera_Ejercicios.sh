@@ -26,8 +26,9 @@ cat $SCRIPT_DIR/E_Permisos_${NroPermisos}.txt | tee -a $HOME/Defensa/Ejercicios.
 mkdir $HOME/Defensa/Permisos_${NroPermisos}
 echo
 sudo ls -ld $HOME/Defensa/Permisos_${NroPermisos} 
-cat $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
 echo
 cat $SCRIPT_DIR/E_P${NroPermisos}.txt  >>  $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
+cat $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
+echo
 
 echo
