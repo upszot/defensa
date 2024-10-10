@@ -16,7 +16,7 @@ echo " Se generaran los ejerciciso NroPermisos: $NroPermisos"
 # Genera Enunciado
 #bash $SCRIPT_DIR/E_Permisos_${NroPermisos}.sh
 
-mkdir $HOME/Defensa/
+mkdir -p $HOME/Defensa/
 
 #Estructura:
 cat $SCRIPT_DIR/E_Estructura_${NroEstructura}.txt | tee $HOME/Defensa/Ejercicios.txt
