@@ -20,10 +20,10 @@ rm -rf $HOME/Defensa/
 mkdir -p $HOME/Defensa/
 
 #Estructura:
-cat $SCRIPT_DIR/E_Estructura_${NroEstructura}.txt | tee $HOME/Defensa/Ejercicios.txt
+cat $SCRIPT_DIR/E_Estructura_${NroEstructura}.txt > tee $HOME/Defensa/Ejercicios.txt
 
 #Permisos:
-cat $SCRIPT_DIR/E_Permisos_${NroPermisos}.txt | tee -a $HOME/Defensa/Ejercicios.txt
+cat $SCRIPT_DIR/E_Permisos_${NroPermisos}.txt >> tee -a $HOME/Defensa/Ejercicios.txt
 mkdir $HOME/Defensa/Permisos_${NroPermisos}
 echo
 sudo ls -ld $HOME/Defensa/Permisos_${NroPermisos} 
@@ -33,5 +33,8 @@ cat $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
 echo
 
 echo
-echo "Trabajar en:  $HOME/Defensa/"
+cd $HOME/Defensa/
+clear
+ls -l 
+cat $HOME/Defensa/Ejercicios.txt
 echo 
