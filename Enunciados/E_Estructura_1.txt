@@ -1,0 +1,9 @@
+paquete/
+├── carta
+│   ├── emisor
+│   └── receptor
+└── cheque
+    ├── emisor
+    ├── monto
+    └── receptor
+

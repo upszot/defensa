@@ -1,0 +1,11 @@
+Materias/
+├── alumnos
+│   ├── notas
+│   ├── Parciales_1
+│   ├── Parciales_2
+│   └── Parciales_3
+└── profesores
+    ├── Parciales_1
+    ├── Parciales_2
+    └── Parciales_3
+
