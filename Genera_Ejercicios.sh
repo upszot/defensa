@@ -36,3 +36,4 @@ clear
 echo "Por favor Ejecute: "
 echo "cd $HOME/Defensa/ "
 echo "cat $HOME/Defensa/Ejercicios.txt"
+

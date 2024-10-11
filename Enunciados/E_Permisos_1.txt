@@ -10,6 +10,6 @@ NO MODIFICAR OWNER
     Puede validar con:
     - ls -ld Permisos*
     - ls -l Permisos*
-    - cat Permisos_*/archivo*
+    - cat Permisos_1/archivo_1.txt
 
 
