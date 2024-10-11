@@ -1,7 +1,7 @@
 
 Permisos:
 
-Modificar SOLAMENTE los permisos del owner de la CARPETA "Permisos" para que:
+Modificar SOLAMENTE los permisos del USUARIO DUEÑO de la CARPETA "Permisos*" para que:
 NO MODIFICAR PERMISOS DEL archivo
 NO MODIFICAR OWNER
 
