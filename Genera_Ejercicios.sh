@@ -15,6 +15,9 @@ NroPermisos="$(( ( RANDOM % 2 ) + 1 ))"
 
 
 if [ -d $HOME/Defensa/ ]; then
+    echo "Por favor Ejecute: "
+    echo "cd $HOME/Defensa/ "
+    echo "cat $HOME/Defensa/Ejercicios.txt"
     exit 1
 fi
 
