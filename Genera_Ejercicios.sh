@@ -27,7 +27,8 @@ cat $SCRIPT_DIR/E_Estructura_${NroEstructura}.txt >  $HOME/Defensa/Ejercicios.tx
 cat $SCRIPT_DIR/E_Permisos_${NroPermisos}.txt >> $HOME/Defensa/Ejercicios.txt 
 mkdir $HOME/Defensa/Permisos
 cat $SCRIPT_DIR/E_Permisos_${NroPermisos}.txt > $HOME/Defensa/Permisos/archivo.txt
-sudo chattr +i  $HOME/Defensa/Ejercicios.txt
+sudo chattr +i $HOME/Defensa/Ejercicios.txt
+sudo chattr +i $HOME/Defensa/Permisos/archivo.txt
 echo
 echo
 #cat $SCRIPT_DIR/E_P${NroPermisos}.txt  >>  $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
