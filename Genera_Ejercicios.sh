@@ -3,33 +3,35 @@
 DIR_BASE=$(dirname "$(readlink -f "$0")")
 SCRIPT_DIR="${DIR_BASE}/Enunciados"
 
-
+# Numeros Random
 NroEstructura="$(( ( RANDOM % 4 ) + 1 ))"
 NroUser="$(( ( RANDOM % 2 ) + 1 ))"
 NroPermisos="$(( ( RANDOM % 2 ) + 1 ))"
 
 
-echo " Se generaran los ejerciciso NroEstructura: $NroEstructura"
-echo " Se generaran los ejerciciso NroUser: $NroUser"
-echo " Se generaran los ejerciciso NroPermisos: $NroPermisos"
+#echo " Se generaran los ejerciciso NroEstructura: $NroEstructura"
+#echo " Se generaran los ejerciciso NroUser: $NroUser"
+#echo " Se generaran los ejerciciso NroPermisos: $NroPermisos"
 
-# Genera Enunciado
-#bash $SCRIPT_DIR/E_Permisos_${NroPermisos}.sh
 
-rm -rf $HOME/Defensa/
+if [ -d $HOME/Defensa/ ]; then
+    exit 1
+fi
+
 mkdir -p $HOME/Defensa/
 
+# --- Genera Enunciado ---#
 #Estructura:
 cat $SCRIPT_DIR/E_Estructura_${NroEstructura}.txt >  $HOME/Defensa/Ejercicios.txt
-
 #Permisos:
-cat $SCRIPT_DIR/E_Permisos_${NroPermisos}.txt >> $HOME/Defensa/Ejercicios.txt
-mkdir $HOME/Defensa/Permisos_${NroPermisos}
+cat $SCRIPT_DIR/E_Permisos_${NroPermisos}.txt >> $HOME/Defensa/Ejercicios.txt 
+mkdir $HOME/Defensa/Permisos
+cat $SCRIPT_DIR/E_Permisos_${NroPermisos}.txt > $HOME/Defensa/Permisos/archivo.txt
+sudo chattr +i  $HOME/Defensa/Ejercicios.txt
 echo
-sudo ls -ld $HOME/Defensa/Permisos_${NroPermisos} 
 echo
-cat $SCRIPT_DIR/E_P${NroPermisos}.txt  >>  $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
-cat $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
+#cat $SCRIPT_DIR/E_P${NroPermisos}.txt  >>  $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
+#cat $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
 echo
 
 clear
