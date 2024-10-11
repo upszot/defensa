@@ -8,6 +8,6 @@ Modificar SOLAMENTE los permisos del owner de la CARPETA "Permisos" para que:
     Puede validar con:
     - ls -ld Permisos*
     - ls -l Permisos*
-    - cat cat Permisos_*/archivo*
+    - cat Permisos_*/archivo*
 
 
