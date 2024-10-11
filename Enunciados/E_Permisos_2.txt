@@ -8,8 +8,8 @@ Modificar SOLAMENTE los permisos del USUARIO DUEÑO de la CARPETA "Permisos*" pa
     - El usuario Puede ver el contenido del archivo, pero NO conocer su existencia
 
     Puede validar con:
-        ls -ld Permisos*
-        ls -l Permisos*
-        cat Permisos_2/archivo_2.txt
+        ls -ld Permisos
+        ls -l Permisos
+        cat Permisos/archivo.txt
 
 
