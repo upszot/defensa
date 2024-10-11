@@ -1,13 +1,13 @@
 #!/bin/bash
 
+
 DIR_BASE=$(dirname "$(readlink -f "$0")")
-SCRIPT_DIR="${DIR_BASE}/Enunciados"
+SCRIPT_DIR="${DIR_BASE}/.Enunciados"
 
 # Numeros Random
 NroEstructura="$(( ( RANDOM % 4 ) + 1 ))"
 NroUser="$(( ( RANDOM % 2 ) + 1 ))"
 NroPermisos="$(( ( RANDOM % 2 ) + 1 ))"
-
 
 #echo " Se generaran los ejerciciso NroEstructura: $NroEstructura"
 #echo " Se generaran los ejerciciso NroUser: $NroUser"
@@ -23,22 +23,21 @@ fi
 
 mkdir -p $HOME/Defensa/
 
+PARCIAL="UTNFRA_SO_1P2C_2024"
+
+
 # --- Genera Enunciado ---#
 #Estructura:
-cat $SCRIPT_DIR/E_Estructura_${NroEstructura}.txt >  $HOME/Defensa/Ejercicios.txt
+RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d ${SCRIPT_DIR}/E_Estructura_${NroEstructura}.txt.e > $HOME/Defensa/Ejercicios.txt 2> /dev/null)
 #Permisos:
-cat $SCRIPT_DIR/E_Permisos_${NroPermisos}.txt >> $HOME/Defensa/Ejercicios.txt 
 mkdir $HOME/Defensa/Permisos
-cat $SCRIPT_DIR/E_Permisos_${NroPermisos}.txt > $HOME/Defensa/Permisos/archivo.txt
+RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d $SCRIPT_DIR/E_Permisos_$NroPermisos.txt.e   >> $HOME/Defensa/Ejercicios.txt 2> /dev/null)
+RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d $SCRIPT_DIR/E_Permisos_$NroPermisos.txt.e   > $HOME/Defensa/Permisos/archivo.txt 2> /dev/null)
 sudo chattr +i $HOME/Defensa/Ejercicios.txt
 sudo chattr +i $HOME/Defensa/Permisos/archivo.txt
-echo
-echo
-#cat $SCRIPT_DIR/E_P${NroPermisos}.txt  >>  $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
-#cat $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
-echo
 
 clear
+echo
 echo "Por favor Ejecute: "
 echo "cd $HOME/Defensa/ "
 echo "cat $HOME/Defensa/Ejercicios.txt"

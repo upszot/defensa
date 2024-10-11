@@ -1,2 +1,0 @@
-El usuario puede conocer la Existencia del archivo (Ver Nombre), Pero no su contenido
-
