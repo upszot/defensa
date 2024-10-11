@@ -4,4 +4,10 @@ Permisos:
 
 Modificar SOLAMENTE los permisos del owner de la CARPETA "Permisos" para que:
     - El usuario Puede ver el contenido del archivo, pero NO conocer su existencia
-    - ls -l 
+
+    Puede validar con:
+    - ls -ld Permisos*
+    - ls -l Permisos*
+    - cat cat Permisos_*/archivo*
+
+

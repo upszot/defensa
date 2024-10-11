@@ -32,9 +32,7 @@ cat $SCRIPT_DIR/E_P${NroPermisos}.txt  >>  $HOME/Defensa/Permisos_${NroPermisos}
 cat $HOME/Defensa/Permisos_${NroPermisos}/archivo_${NroPermisos}.txt
 echo
 
-echo
-cd $HOME/Defensa/
 clear
-ls -l 
-cat $HOME/Defensa/Ejercicios.txt
-echo 
+echo "Por favor Ejecute: "
+echo "cd $HOME/Defensa/ "
+echo "cat $HOME/Defensa/Ejercicios.txt"
