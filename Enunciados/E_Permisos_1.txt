@@ -2,6 +2,9 @@
 Permisos:
 
 Modificar SOLAMENTE los permisos del owner de la CARPETA "Permisos" para que:
+NO MODIFICAR PERMISOS DEL archivo
+NO MODIFICAR OWNER
+
     - El usuario puede conocer la Existencia del archivo (Ver Nombre), Pero no su contenido
 
     Puede validar con:
