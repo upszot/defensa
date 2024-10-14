@@ -13,6 +13,7 @@ DIR_BASE=$(dirname "$(readlink -f "$0")")
 SCRIPT_DIR="${DIR_BASE}/.Enunciados"
 
 # Numeros Random
+NroParticiones="$(( ( RANDOM % 4 ) + 1 ))"
 NroEstructura="$(( ( RANDOM % 4 ) + 1 ))"
 NroUser="$(( ( RANDOM % 2 ) + 1 ))"
 NroPermisos="$(( ( RANDOM % 2 ) + 1 ))"
@@ -22,8 +23,13 @@ NroPermisos="$(( ( RANDOM % 2 ) + 1 ))"
 #echo " Se generaran los ejerciciso NroPermisos: $NroPermisos"
 
 # --- Genera Enunciado ---#
+echo > $HOME/Defensa/Ejercicios.txt
+
+# Particion y Montaje:
+RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d ${SCRIPT_DIR}/E_Particiones_${NroParticiones}.txt.e >> $HOME/Defensa/Ejercicios.txt 2> /dev/null)
+
 # Estructura:
-RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d ${SCRIPT_DIR}/E_Estructura_${NroEstructura}.txt.e > $HOME/Defensa/Ejercicios.txt 2> /dev/null)
+RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d ${SCRIPT_DIR}/E_Estructura_${NroEstructura}.txt.e >> $HOME/Defensa/Ejercicios.txt 2>> /dev/null)
 # Permisos:
 mkdir $HOME/Defensa/Permisos
 RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d $SCRIPT_DIR/E_Permisos_$NroPermisos.txt.e   >> $HOME/Defensa/Ejercicios.txt 2> /dev/null)
