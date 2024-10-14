@@ -1,7 +1,7 @@
 #!/bin/bash
 
-USUARIO_VALIDACION_PUNTO_C=$1
-#USUARIO_VALIDACION_PUNTO_C="p1c2_2024_P1"
+# Recibo en $1 el usuario y sino asigno valor por default
+USUARIO_VALIDACION_PUNTO_C=${1:-"p1c2_2024_P1"}
 
 
 
@@ -13,8 +13,8 @@ bash $SCRIPT_DIR/check_C.sh $USUARIO_VALIDACION_PUNTO_C
 bash $SCRIPT_DIR/check_D.sh
 
 
-echo "Ver Detalles Punto por punto."
-read -p "[Enter] para continuar..." RTA_VER
+echo
+read -p "[Enter] para Ver Detalles Punto por punto." RTA_VER
 clear
 
 echo
