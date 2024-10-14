@@ -19,7 +19,7 @@ if [ ! -d "$RTA_HOME" ]; then
     echo "Punto C - Error: NO Existe el Home del usuario: $RTA_HOME "
 fi
 
-if [ "$RTA_SHELL" -ne "/bin/bash" ]; then
+if [ "$RTA_SHELL" != "/bin/bash" ]; then
     echo "Punto C - Error: El interprete de comandos del usuario esta mal seteado "
 fi
 
