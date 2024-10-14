@@ -23,7 +23,7 @@ fi
 
 # Resultado final
 if [ $COD_ERR -ne 0 ]; then
-    echo -e "ERROR - Cod: $COD_ERR - $SMS_ERROR"
+    echo -e "Punto A - Error - Cod: $COD_ERR - $SMS_ERROR"
     exit $COD_ERR
 fi
 

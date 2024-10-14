@@ -5,8 +5,8 @@ USER_VALIDACION=$1
 echo
 RTA_C_User=$(grep -i UDef_ /etc/passwd  -c)
 
-if [ "$RTA_C_User" -ne "0" ]; then
-    echo "Error: No hay usuarios creados como UDef_* "
+if [ "$RTA_C_User" -eq "0" ]; then
+    echo "Punto C - Error: No hay usuarios creados como UDef_* "
     exit 1
 fi
 
@@ -16,11 +16,11 @@ RTA_SHELL=$(grep UDef_ /etc/passwd  | awk -F ':' '{print $7}')
 
 
 if [ ! -d "$RTA_HOME" ]; then
-    echo "Error: NO Existe el Home del usuario: $RTA_HOME "
+    echo "Punto C - Error: NO Existe el Home del usuario: $RTA_HOME "
 fi
 
 if [ "$RTA_SHELL" -ne "/bin/bash" ]; then
-    echo "Error: El interprete de comandos del usuario esta mal seteado "
+    echo "Punto C - Error: El interprete de comandos del usuario esta mal seteado "
 fi
 
 E_NRO=$(grep "CODIGO:"  $HOME/Defensa/Ejercicios.txt | awk -F ':' '{print $4}')
