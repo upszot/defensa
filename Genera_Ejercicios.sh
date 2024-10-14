@@ -14,7 +14,7 @@ SCRIPT_DIR="${DIR_BASE}/.Enunciados"
 
 # Numeros Random
 NroParticiones="$(( ( RANDOM % 4 ) + 1 ))"
-NroEstructura="$(( ( RANDOM % 4 ) + 1 ))"
+NroEstructura="$(( ( RANDOM % 5 ) + 1 ))"
 NroUser="$(( ( RANDOM % 2 ) + 1 ))"
 NroPermisos="$(( ( RANDOM % 2 ) + 1 ))"
 
@@ -22,7 +22,7 @@ ECODIGO="A${NroParticiones}:B${NroEstructura}:C${NroUser}:D${NroPermisos}"
 
 # --- Genera Enunciado ---#
 echo "CODIGO: $ECODIGO" > $HOME/Defensa/Ejercicios.txt
-# Examen CODIGO:A1:B1:C1:D1
+# CODIGO: A1:B1:C1:D1
 
 
 # A - Particion y Montaje:

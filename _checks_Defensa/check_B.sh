@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo
 DIR_BASE=$(dirname "$(readlink -f "$0")")
 DIR_PADRE=$(dirname "$DIR_BASE")   
 
