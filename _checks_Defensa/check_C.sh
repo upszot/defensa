@@ -28,9 +28,9 @@ echo
 echo "OK - Punto C - (Parte Obligatoria)"
 echo "     Punto C - (Parte Promocion) - Valide Manualmente Grupos de Usuario ($E_NRO)"
 echo
-echo "Grupos Usuario: $USER_VALIDACION"
-id $USER_VALIDACION
+echo "Grupos Usuario Referencia: $USER_VALIDACION"
+id -nG $USER_VALIDACION
 echo
-echo "Grupos Usuario: $$RTA_USER"
+echo "Grupos Usuario: $RTA_USER"
 id $RTA_USER
 echo
