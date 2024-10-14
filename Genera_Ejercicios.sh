@@ -27,21 +27,21 @@ echo "CODIGO: $ECODIGO" > $HOME/Defensa/Ejercicios.txt
 
 # A - Particion y Montaje:
 touch $HOME/Defensa/script_Puntos/Def_PuntoA.sh
-RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d ${SCRIPT_DIR}/A_Particiones_${NroParticiones}.txt.e >> $HOME/Defensa/Ejercicios.txt 2> /dev/null)
+RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d ${SCRIPT_DIR}/A_Particiones_${NroParticiones}.e >> $HOME/Defensa/Ejercicios.txt 2> /dev/null)
 
 # B - Estructura:
 touch $HOME/Defensa/script_Puntos/Def_PuntoB.sh
-RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d ${SCRIPT_DIR}/B_Estructura_${NroEstructura}.txt.e >> $HOME/Defensa/Ejercicios.txt 2>> /dev/null)
+RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d ${SCRIPT_DIR}/B_Estructura_${NroEstructura}.e >> $HOME/Defensa/Ejercicios.txt 2>> /dev/null)
 
 # C - Usuarios
 touch $HOME/Defensa/script_Puntos/Def_PuntoC.sh
-RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d ${SCRIPT_DIR}/C_Usuarios_${NroUser}.txt.e >> $HOME/Defensa/Ejercicios.txt 2>> /dev/null)
+RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d ${SCRIPT_DIR}/C_Usuarios_${NroUser}.e >> $HOME/Defensa/Ejercicios.txt 2>> /dev/null)
 
 # D - Permisos:
 touch $HOME/Defensa/script_Puntos/Def_PuntoD.sh
 mkdir $HOME/Defensa/Permisos
-RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d $SCRIPT_DIR/D_Permisos_$NroPermisos.txt.e   >> $HOME/Defensa/Ejercicios.txt 2> /dev/null)
-RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d $SCRIPT_DIR/D_Permisos_$NroPermisos.txt.e   > $HOME/Defensa/Permisos/archivo.txt 2> /dev/null)
+RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d $SCRIPT_DIR/D_Permisos_$NroPermisos.e   >> $HOME/Defensa/Ejercicios.txt 2> /dev/null)
+RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d $SCRIPT_DIR/D_Permisos_$NroPermisos.e   > $HOME/Defensa/Permisos/archivo.txt 2> /dev/null)
 
 sudo chattr +i $HOME/Defensa/Ejercicios.txt
 sudo chattr +i $HOME/Defensa/Permisos/archivo.txt

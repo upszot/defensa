@@ -8,8 +8,8 @@ PATH_TEMP="/tmp/borrar"
 PARCIAL="UTNFRA_SO_1P2C_2024"
 
 
-E_NRO=$(grep "CODIGO:"  ${DIR_PADRE}/Ejercicios.txt | awk -F ':' '{print $3}')
-MAPEO_FILE="$DIR_BASE/.soporte/Punto_${E_NRO}_Mapeo.e"
+E_NRO=$(grep "CODIGO:"  $HOME/Defensa/Ejercicios.txt | awk -F ':' '{print $3}')
+MAPEO_FILE="$DIR_BASE/.soporte/Punto_${E_NRO}_Mapeo.txt.e"
 
 gpg --batch --yes --passphrase "$PARCIAL" --output ${MAPEO_FILE}.txt -d $MAPEO_FILE > /dev/null 2>&1
 
