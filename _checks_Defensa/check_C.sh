@@ -25,8 +25,8 @@ fi
 
 E_NRO=$(grep "CODIGO:"  $HOME/Defensa/Ejercicios.txt | awk -F ':' '{print $4}')
 echo
-echo "OK - Punto C (Parte Obligatoria)"
-echo "     Punto C - Parte Promocion) - Valide Manualmente Grupos de Usuario (C$E_NRO)"
+echo "OK - Punto C - (Parte Obligatoria)"
+echo "     Punto C - (Parte Promocion) - Valide Manualmente Grupos de Usuario ($E_NRO)"
 echo
 echo "Grupos Usuario: $USER_VALIDACION"
 id $USER_VALIDACION

@@ -30,7 +30,7 @@ fi
 E_NRO=$(grep "CODIGO:"  $HOME/Defensa/Ejercicios.txt | awk -F ':' '{print $2}')
 echo "OK - Punto A"
 echo
-echo "Valide Tamaños y Tipos de Particiones (A$E_NRO)"
+echo "Valide Tamaños y Tipos de Particiones ($E_NRO)"
 echo
 echo "<Device>  Tamaño  Tipo"  | column -t
 sudo fdisk -l $DISCO | grep Linux | awk '{print $1"\t"$5"\t"$7" "$8}' | column -t

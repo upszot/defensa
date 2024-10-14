@@ -1,7 +1,7 @@
 #!/bin/bash
 E_NRO=$(grep "CODIGO:"  $HOME/Defensa/Ejercicios.txt | awk -F ':' '{print $5}')
 echo
-echo "Validar Segun Enunciado: (D$E_NRO)"
+echo "Validar Segun Enunciado: ($E_NRO)"
 echo
 
 

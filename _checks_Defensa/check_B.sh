@@ -28,7 +28,7 @@ find $HOME/Defensa/$PATH_PRINCIPAL -type d  | sed  "s|$HOME/Defensa/||g" | sort 
 
 # Comparar el resultado con el archivo de soporte
 if diff "$PATH_TEMP/Punto_B_Mapeo_Alumno.txt" "${MAPEO_FILE}.txt" > /dev/null; then
-    echo "Punto B - OK"
+    echo "Punto B - Estructura OK - Validacion Manual del comando - $E_NRO)"
 else
     echo "Punto B - Error Code: 2 - Mensaje: Diferencias en la Estructura.."
     diff "$PATH_TEMP/Punto_B_Mapeo_Alumno.txt" "${MAPEO_FILE}.txt"
