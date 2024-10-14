@@ -4,7 +4,7 @@ if [ -d $HOME/Defensa/ ]; then
     echo "Por favor Ejecute: "
     echo "cd $HOME/Defensa/ "
     echo "cat $HOME/Defensa/Ejercicios.txt"
-    exit 1
+#    exit 1
 fi
 
 mkdir -p $HOME/Defensa/script_Puntos
@@ -43,8 +43,8 @@ mkdir $HOME/Defensa/Permisos
 RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d $SCRIPT_DIR/D_Permisos_$NroPermisos.e   >> $HOME/Defensa/Ejercicios.txt 2> /dev/null)
 RTA=$(gpg --batch --yes --passphrase "$PARCIAL" --output - -d $SCRIPT_DIR/D_Permisos_$NroPermisos.e   > $HOME/Defensa/Permisos/archivo.txt 2> /dev/null)
 
-sudo chattr +i $HOME/Defensa/Ejercicios.txt
-sudo chattr +i $HOME/Defensa/Permisos/archivo.txt
+#sudo chattr +i $HOME/Defensa/Ejercicios.txt
+#sudo chattr +i $HOME/Defensa/Permisos/archivo.txt
 
 clear
 echo
