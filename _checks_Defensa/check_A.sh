@@ -1,5 +1,5 @@
 #!/bin/bash
-DISCO=$(sudo fdisk -l |grep "2 G" | awk '{print $2}' | awk -F ':' '{ print $1}')
+DISCO=$(sudo fdisk -l |grep "1 G" | awk '{print $2}' | awk -F ':' '{ print $1}')
 
 CANTIDAD_DE_MONTAJES=1
 CANTIDAD_DE_SWAP=1
